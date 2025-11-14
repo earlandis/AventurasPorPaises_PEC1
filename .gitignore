@@ -1,0 +1,9 @@
+# Node modules
+node_modules/
+
+# Parcel cache y build
+.parcel-cache/
+dist/
+
+# Archivos del sistema
+.DS_Store
