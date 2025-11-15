@@ -1,14 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Plantilla base PEC</title>
-  <link rel="stylesheet" href="./styles.scss">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agencia de Viajes - Inicio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h1>Plantilla base con Parcel</h1>
-  <p>Todo listo para empezar la PEC.</p>
-  <script src="./main.js"></script>
+  <header>
+    <nav class="navbar">
+    <div class="logo">GlobalXperience</div>
+    <ul class="nav-links">
+        <li><a href="index.html" class="active">Inicio</a></li>
+        <li class="dropdown">
+        <a href="./categoria/index.html">Países</a>
+        <ul class="dropdown-menu">
+            <li><a href="./det1/index.html">Japón</a></li>
+            <li><a href="./det2/index.html">Turquía</a></li>
+        </ul>
+        </li>
+        <li><a href="./links/index.html">Enlaces</a></li>
+    </ul>
+    <div class="burger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    </nav>
+
+    <div class="hero">
+      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Explora sin límites</h1>
+      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Desde cielos abiertos hasta profundidades marinas, ¡tu aventura comienza aquí!</p>
+      <a href="./categoria/index.html" class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Explora destinos</a>
+    </div>
+  </header>
+
+  <main class="main-double">
+    <section class="mapa-categorias">
+        <h2>Experiencias por el mundo</h2>
+        <div class="map-container">
+            <img src="./imagenes/mapamundi.jpg" alt="Mapa del mundo">
+            <!-- Pins de categorías -->
+            <a href="./det1/index.html" class="pin" data-top="45" data-left="90" title="Japón"></a>
+            <a href="./det2/index.html" class="pin" data-top="42" data-left="63" title="Turquía"></a>
+            <a href="#" class="pin" data-top="34" data-left="19" title="Estados Unidos"></a>
+            <a href="#" class="pin" data-top="92" data-left="92" title="Nueva Zelanda"></a>
+            <a href="#" class="pin" data-top="47" data-left="62" title="Egipto"></a>
+            <a href="#" class="pin" data-top="85" data-left="85" title="Australia"></a>
+            <a href="#" class="pin" data-top="35" data-left="55" title="Francia"></a>
+            <a href="#" class="pin" data-top="63" data-left="32" title="Brasil"></a>
+            <a href="#" class="pin" data-top="75" data-left="58" title="Sudáfrica"></a>
+        </div>
+    </section>
+
+    <section class="activities-slider">
+    <h2>Actividades destacadas</h2>
+    <div class="slider">
+        <button class="prev">&#10094;</button>
+        <div class="cards-container">
+        <div class="card">
+            <img src="./imagenes/parapente.jpg" alt="Parapente">
+            <h3>Parapente</h3>
+        </div>
+        <div class="card">
+            <img src="./imagenes/sky.jpg" alt="Ski">
+            <h3>Ski</h3>
+        </div>
+        <div class="card">
+            <img src="./imagenes/buceo.jpg" alt="Buceo">
+            <h3>Buceo</h3>
+        </div>
+        <div class="card">
+            <img src="./imagenes/gastronomia.jpg" alt="Gastronomía">
+            <h3>Gastronomía</h3>
+        </div>
+        <div class="card">
+            <img src="./imagenes/globo.jpg" alt="Globo aerostático">
+            <h3>Globo aerostático</h3>
+        </div>
+        <div class="card">
+            <img src="./imagenes/safari.jpg" alt="Safari">
+            <h3>Safari</h3>
+        </div>
+        <div class="card">
+            <img src="./imagenes/snow.jpg" alt="Snowboard">
+            <h3>Snowboard</h3>
+        </div>
+        </div>
+        <button class="next">&#10095;</button>
+    </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 GlobalXperience. Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="module" src="./main.js"></script>
 </body>
 </html>
