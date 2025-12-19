@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlobalXperience - País 1</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../scss/style.scss">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="det1">
   <header class="header-alt-2">
     <nav class="navbar">
-    <div class="logo">GlobalXperience</div>
+    <a href="./index.html" class="logo">GlobalXperience</a>
     <ul class="nav-links">
         <li><a href="../index.html">Inicio</a></li>
         <li class="dropdown">
@@ -47,20 +47,57 @@
   <!-- Galería de experiencias -->
   <div class="gallery">
     <figure>
-      <img src="../imagenes/claseCocina.jpg" alt="Clase de cocina japonesa">
+      <img 
+        src="../imagenes/optimizadas/claseCocina-800w.jpg" 
+        alt="Clase de cocina japonesa"
+        srcset="
+          ../imagenes/optimizadas/claseCocina-400w.jpg 400w,
+          ../imagenes/optimizadas/claseCocina-800w.jpg 800w,
+          ../imagenes/optimizadas/claseCocina-1200w.jpg 1200w,
+          ../imagenes/optimizadas/claseCocina-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/claseCocina-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/claseCocina-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 768px) 100vw, 33vw"
+      >
       <figcaption>Aprende recetas auténticas de la mano de un chef japonés y disfruta de una experiencia culinaria inolvidable.</figcaption>
     </figure>
 
     <figure>
-      <img src="..//imagenes/templos.jpg" alt="Paseo por templos">
+      <img 
+        src="../imagenes/optimizadas/templos-800w.jpg" 
+        alt="Paseo por templos"
+        srcset="
+          ../imagenes/optimizadas/templos-400w.jpg 400w,
+          ../imagenes/optimizadas/templos-800w.jpg 800w,
+          ../imagenes/optimizadas/templos-1200w.jpg 1200w,
+          ../imagenes/optimizadas/templos-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/templos-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/templos-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 768px) 100vw, 33vw"
+      >
       <figcaption>Descubre la historia y espiritualidad de los templos más emblemáticos en un recorrido guiado y lleno de encanto.</figcaption>
     </figure>
 
     <figure>
-      <img src="..//imagenes/festival.jpg" alt="Festival tradicional">
+      <img 
+        src="../imagenes/optimizadas/festival-800w.jpg" 
+        alt="Festival tradicional"
+        srcset="
+          ../imagenes/optimizadas/festival-400w.jpg 400w,
+          ../imagenes/optimizadas/festival-800w.jpg 800w,
+          ../imagenes/optimizadas/festival-1200w.jpg 1200w,
+          ../imagenes/optimizadas/festival-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/festival-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/festival-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 768px) 100vw, 33vw"
+      >
       <figcaption>Vive la magia de un festival japonés con música, gastronomía y rituales culturales únicos.</figcaption>
     </figure>
   </div>
+
 
   <!-- Video inspirador -->
   <div class="video">

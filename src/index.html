@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agencia de Viajes - Inicio</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./scss/style.scss">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="inicio">
   <header>
     <nav class="navbar">
-    <div class="logo">GlobalXperience</div>
+    <a href="./index.html" class="logo">GlobalXperience</a>
     <ul class="nav-links">
         <li><a href="index.html" class="active">Inicio</a></li>
         <li class="dropdown">
@@ -22,28 +22,117 @@
         </li>
         <li><a href="./links/index.html">Enlaces</a></li>
     </ul>
-    <div class="burger">
+     <div class="burger">
         <div></div>
         <div></div>
         <div></div>
-    </div>
+      </div>
     </nav>
-
     <div class="hero">
-      <h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Explora sin límites</h1>
-      <p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Desde cielos abiertos hasta profundidades marinas, ¡tu aventura comienza aquí!</p>
-      <a href="./categoria/index.html" class="btn" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">Explora destinos</a>
+        <!-- Fondo animado -->
+        <svg class="hero-anim" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+        <!-- Cielo -->
+        <rect width="1200" height="400" fill="#BBF0FF" />
+
+        <!-- Nubes -->
+        <g id="clouds" fill="white" opacity="0.8">
+            <g class="cloud" transform="translate(0,60)">
+            <ellipse cx="100" cy="70" rx="50" ry="30"/>
+            <ellipse cx="140" cy="60" rx="40" ry="25"/>
+            <ellipse cx="80" cy="60" rx="30" ry="20"/>
+            <animateTransform attributeName="transform" type="translate" from="-200,60" to="1400,60" dur="120s" repeatCount="indefinite"/>
+            </g>
+            <g class="cloud" transform="translate(0,120)" opacity="0.7">
+            <ellipse cx="500" cy="0" rx="80" ry="40"/>
+            <ellipse cx="550" cy="-10" rx="60" ry="30"/>
+            <ellipse cx="470" cy="-10" rx="50" ry="25"/>
+            <animateTransform attributeName="transform" type="translate" from="-400,120" to="1600,120" dur="150s" repeatCount="indefinite"/>
+            </g>
+            <g class="cloud" transform="translate(0,40)" opacity="0.6">
+            <ellipse cx="900" cy="90" rx="50" ry="25"/>
+            <ellipse cx="940" cy="80" rx="40" ry="20"/>
+            <ellipse cx="880" cy="80" rx="35" ry="15"/>
+            <animateTransform attributeName="transform" type="translate" from="-300,40" to="1500,40" dur="180s" repeatCount="indefinite"/>
+            </g>
+        </g>
+
+        <!-- Globos aerostáticos -->
+        <g id="balloons">
+            <!-- Globo rojo -->
+            <g transform="translate(200,150)">
+            <circle cx="0" cy="0" r="25" fill="#FF6F61"/>
+            <rect x="-10" y="30" width="20" height="15" fill="#8B4513"/>
+            <line x1="-10" y1="0" x2="-10" y2="30" stroke="#8B4513" stroke-width="2"/>
+            <line x1="10" y1="0" x2="10" y2="30" stroke="#8B4513" stroke-width="2"/>
+            <animateTransform attributeName="transform" type="translate" values="200,150;220,110;200,150" dur="12s" repeatCount="indefinite"/>
+            </g>
+            <!-- Globo amarillo movido más a la derecha -->
+            <g transform="translate(900,120)">
+            <circle cx="0" cy="0" r="30" fill="#FFD700"/>
+            <rect x="-12" y="35" width="24" height="18" fill="#8B4513"/>
+            <line x1="-12" y1="0" x2="-12" y2="35" stroke="#8B4513" stroke-width="2"/>
+            <line x1="12" y1="0" x2="12" y2="35" stroke="#8B4513" stroke-width="2"/>
+            <animateTransform attributeName="transform" type="translate" values="900,120;920,80;900,120" dur="15s" repeatCount="indefinite"/>
+            </g>
+        </g>
+
+        <!-- Paracaidistas centrados -->
+        <g id="parachutes">
+            <g transform="translate(400,100)">
+            <path d="M0 0 L-15 25 L15 25 Z" fill="#1E88E5"/>
+            <line x1="0" y1="25" x2="0" y2="50" stroke="#555" stroke-width="2"/>
+            <circle cx="0" cy="55" r="5" fill="#F44336"/>
+            <animateTransform attributeName="transform" type="translate" values="400,50;400,350" dur="10s" repeatCount="indefinite"/>
+            </g>
+            <g transform="translate(800,120)">
+            <path d="M0 0 L-15 25 L15 25 Z" fill="#F44336"/>
+            <line x1="0" y1="25" x2="0" y2="50" stroke="#555" stroke-width="2"/>
+            <circle cx="0" cy="55" r="5" fill="#1E88E5"/>
+            <animateTransform attributeName="transform" type="translate" values="800,70;800,370" dur="12s" repeatCount="indefinite"/>
+            </g>
+        </g>
+        </svg>
+
+        <!-- Imagen recortada con la forma del texto -->
+        <svg class="hero-image" viewBox="0 0 1200 400" preserveAspectRatio="xMidYMid slice">
+            <defs>
+            <clipPath id="text-clip">
+                <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle"
+                    font-size="80" font-weight="700">
+                Explora sin límites
+                </text>
+            </clipPath>
+            </defs>
+
+            <image href="./imagenes/optimizadas/fondo_prinipal-1200w@2x.jpg"
+                width="1200" height="400"
+                clip-path="url(#text-clip)"/>
+        </svg>
+        <div class="hero-frame"></div>
+     <div class="hero-text">
+            <p>Desde cielos abiertos hasta profundidades marinas, ¡tu aventura comienza aquí!</p>
+            <a href="./categoria/index.html" class="btn">Explora destinos</a>
+        </div>
     </div>
+
+
   </header>
 
   <main class="main-double">
     <section class="mapa-categorias">
         <h2>Experiencias por el mundo</h2>
         <div class="map-container">
-            <img src="./imagenes/mapamundi.jpg" alt="Mapa del mundo">
+            <img 
+            src="./imagenes/optimizadas/mapamundi-800w.jpg" 
+            alt="Mapa del mundo"
+            srcset="
+                ./imagenes/optimizadas/mapamundi-800w.jpg 1x,
+                ./imagenes/optimizadas/mapamundi-800w@2x.jpg 2x
+            "
+            >
             <!-- Pins de categorías -->
-            <a href="./det1/index.html" class="pin" data-top="45" data-left="90" title="Japón"></a>
-            <a href="./det2/index.html" class="pin" data-top="42" data-left="63" title="Turquía"></a>
+            <a href="./det1/index.html" class="pin" data-top="45" data-left="90" title="Japón" aria-label="Ver detalles de Japón"></a>
+            <a href="./det2/index.html" class="pin" data-top="42" data-left="63" title="Turquía" aria-label="Ver detalles de Turquía"></a>
             <a href="#" class="pin" data-top="34" data-left="19" title="Estados Unidos"></a>
             <a href="#" class="pin" data-top="92" data-left="92" title="Nueva Zelanda"></a>
             <a href="#" class="pin" data-top="47" data-left="62" title="Egipto"></a>
@@ -57,39 +146,132 @@
     <section class="activities-slider">
     <h2>Actividades destacadas</h2>
     <div class="slider">
-        <button class="prev">&#10094;</button>
+        <button class="prev" aria-label="Actividad anterior">‹</button>
         <div class="cards-container">
-        <div class="card">
-            <img src="./imagenes/parapente.jpg" alt="Parapente">
+
+            <div class="card">
+            <img 
+                src="./imagenes/optimizadas/parapente-800w.jpg"
+                srcset="
+                ./imagenes/optimizadas/parapente-400w.jpg 400w,
+                ./imagenes/optimizadas/parapente-800w.jpg 800w,
+                ./imagenes/optimizadas/parapente-1200w.jpg 1200w,
+                ./imagenes/optimizadas/parapente-400w@2x.jpg 400w 2x,
+                ./imagenes/optimizadas/parapente-800w@2x.jpg 800w 2x,
+                ./imagenes/optimizadas/parapente-1200w@2x.jpg 1200w 2x
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="Parapente"
+            >
             <h3>Parapente</h3>
-        </div>
-        <div class="card">
-            <img src="./imagenes/sky.jpg" alt="Ski">
+            </div>
+
+            <div class="card">
+            <img 
+                src="./imagenes/optimizadas/sky-800w.jpg"
+                srcset="
+                ./imagenes/optimizadas/sky-400w.jpg 400w,
+                ./imagenes/optimizadas/sky-800w.jpg 800w,
+                ./imagenes/optimizadas/sky-1200w.jpg 1200w,
+                ./imagenes/optimizadas/sky-400w@2x.jpg 400w 2x,
+                ./imagenes/optimizadas/sky-800w@2x.jpg 800w 2x,
+                ./imagenes/optimizadas/sky-1200w@2x.jpg 1200w 2x
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="Ski"
+            >
             <h3>Ski</h3>
-        </div>
-        <div class="card">
-            <img src="./imagenes/buceo.jpg" alt="Buceo">
+            </div>
+
+            <div class="card">
+            <img 
+                src="./imagenes/optimizadas/buceo-800w.jpg"
+                srcset="
+                ./imagenes/optimizadas/buceo-400w.jpg 400w,
+                ./imagenes/optimizadas/buceo-800w.jpg 800w,
+                ./imagenes/optimizadas/buceo-1200w.jpg 1200w,
+                ./imagenes/optimizadas/buceo-400w@2x.jpg 400w 2x,
+                ./imagenes/optimizadas/buceo-800w@2x.jpg 800w 2x,
+                ./imagenes/optimizadas/buceo-1200w@2x.jpg 1200w 2x
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="Buceo"
+            >
             <h3>Buceo</h3>
-        </div>
-        <div class="card">
-            <img src="./imagenes/gastronomia.jpg" alt="Gastronomía">
+            </div>
+
+            <div class="card">
+            <img 
+                src="./imagenes/optimizadas/gastronomia-800w.jpg"
+                srcset="
+                ./imagenes/optimizadas/gastronomia-400w.jpg 400w,
+                ./imagenes/optimizadas/gastronomia-800w.jpg 800w,
+                ./imagenes/optimizadas/gastronomia-1200w.jpg 1200w,
+                ./imagenes/optimizadas/gastronomia-400w@2x.jpg 400w 2x,
+                ./imagenes/optimizadas/gastronomia-800w@2x.jpg 800w 2x,
+                ./imagenes/optimizadas/gastronomia-1200w@2x.jpg 1200w 2x
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="Gastronomía"
+            >
             <h3>Gastronomía</h3>
-        </div>
-        <div class="card">
-            <img src="./imagenes/globo.jpg" alt="Globo aerostático">
+            </div>
+
+            <div class="card">
+            <img 
+                src="./imagenes/optimizadas/globo-800w.jpg"
+                srcset="
+                ./imagenes/optimizadas/globo-400w.jpg 400w,
+                ./imagenes/optimizadas/globo-800w.jpg 800w,
+                ./imagenes/optimizadas/globo-1200w.jpg 1200w,
+                ./imagenes/optimizadas/globo-400w@2x.jpg 400w 2x,
+                ./imagenes/optimizadas/globo-800w@2x.jpg 800w 2x,
+                ./imagenes/optimizadas/globo-1200w@2x.jpg 1200w 2x
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="Globo aerostático"
+            >
             <h3>Globo aerostático</h3>
-        </div>
-        <div class="card">
-            <img src="./imagenes/safari.jpg" alt="Safari">
+            </div>
+
+            <div class="card">
+            <img 
+                src="./imagenes/optimizadas/safari-800w.jpg"
+                srcset="
+                ./imagenes/optimizadas/safari-400w.jpg 400w,
+                ./imagenes/optimizadas/safari-800w.jpg 800w,
+                ./imagenes/optimizadas/safari-1200w.jpg 1200w,
+                ./imagenes/optimizadas/safari-400w@2x.jpg 400w 2x,
+                ./imagenes/optimizadas/safari-800w@2x.jpg 800w 2x,
+                ./imagenes/optimizadas/safari-1200w@2x.jpg 1200w 2x
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="Safari"
+            >
             <h3>Safari</h3>
-        </div>
-        <div class="card">
-            <img src="./imagenes/snow.jpg" alt="Snowboard">
+            </div>
+
+            <div class="card">
+            <img 
+                src="./imagenes/optimizadas/snow-800w.jpg"
+                srcset="
+                ./imagenes/optimizadas/snow-400w.jpg 400w,
+                ./imagenes/optimizadas/snow-800w.jpg 800w,
+                ./imagenes/optimizadas/snow-1200w.jpg 1200w,
+                ./imagenes/optimizadas/snow-400w@2x.jpg 400w 2x,
+                ./imagenes/optimizadas/snow-800w@2x.jpg 800w 2x,
+                ./imagenes/optimizadas/snow-1200w@2x.jpg 1200w 2x
+                "
+                sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                alt="Snowboard"
+            >
             <h3>Snowboard</h3>
+            </div>
+
         </div>
+        <button class="next" aria-label="Actividad siguiente">›</button>
         </div>
-        <button class="next">&#10095;</button>
-    </div>
+
     </section>
   </main>
 

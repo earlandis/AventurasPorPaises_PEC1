@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlobalXperience - País 1</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../scss/style.scss">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="det2">
   <header class="header-alt-3">
     <nav class="navbar">
-    <div class="logo">GlobalXperience</div>
+    <a href="./index.html" class="logo">GlobalXperience</a>
     <ul class="nav-links">
         <li><a href="../index.html">Inicio</a></li>
         <li class="dropdown">
@@ -45,22 +45,59 @@
   </div>
 
   <!-- Galería de experiencias -->
-    <div class="gallery">
+  <div class="gallery">
     <figure>
-      <img src="../imagenes/paseoGlobo.jpg" alt="Paseo en globo aerostático por Capadocia">
+      <img 
+        src="../imagenes/optimizadas/paseoGlobo-1200w.jpg" 
+        alt="Paseo en globo aerostático por Capadocia"
+        srcset="
+          ../imagenes/optimizadas/paseoGlobo-400w.jpg 400w,
+          ../imagenes/optimizadas/paseoGlobo-400w@2x.jpg 800w,
+          ../imagenes/optimizadas/paseoGlobo-800w.jpg 800w,
+          ../imagenes/optimizadas/paseoGlobo-800w@2x.jpg 1600w,
+          ../imagenes/optimizadas/paseoGlobo-1200w.jpg 1200w,
+          ../imagenes/optimizadas/paseoGlobo-1200w@2x.jpg 2400w
+        "
+        sizes="(max-width: 768px) 100vw, 33vw"
+      >
       <figcaption>Surca los cielos al amanecer y contempla los paisajes lunares de Capadocia desde un globo aerostático.</figcaption>
     </figure>
 
     <figure>
-      <img src="../imagenes/crucero.jpg" alt="Crucero por el Bósforo en Estambul">
+      <img 
+        src="../imagenes/optimizadas/crucero-1200w.jpg" 
+        alt="Crucero por el Bósforo en Estambul"
+        srcset="
+          ../imagenes/optimizadas/crucero-400w.jpg 400w,
+          ../imagenes/optimizadas/crucero-400w@2x.jpg 800w,
+          ../imagenes/optimizadas/crucero-800w.jpg 800w,
+          ../imagenes/optimizadas/crucero-800w@2x.jpg 1600w,
+          ../imagenes/optimizadas/crucero-1200w.jpg 1200w,
+          ../imagenes/optimizadas/crucero-1200w@2x.jpg 2400w
+        "
+        sizes="(max-width: 768px) 100vw, 33vw"
+      >
       <figcaption>Navega entre dos continentes y disfruta de las vistas más icónicas de Estambul en un relajante crucero por el Bósforo.</figcaption>
     </figure>
 
     <figure>
-      <img src="..//imagenes/piscinaTermal.jpg" alt="Visita a Pamukkale y Piscinas termales">
+      <img 
+        src="../imagenes/optimizadas/piscinaTermal-1200w.jpg" 
+        alt="Visita a Pamukkale y Piscinas termales"
+        srcset="
+          ../imagenes/optimizadas/piscinaTermal-400w.jpg 400w,
+          ../imagenes/optimizadas/piscinaTermal-400w@2x.jpg 800w,
+          ../imagenes/optimizadas/piscinaTermal-800w.jpg 800w,
+          ../imagenes/optimizadas/piscinaTermal-800w@2x.jpg 1600w,
+          ../imagenes/optimizadas/piscinaTermal-1200w.jpg 1200w,
+          ../imagenes/optimizadas/piscinaTermal-1200w@2x.jpg 2400w
+        "
+        sizes="(max-width: 768px) 100vw, 33vw"
+      >
       <figcaption>Explora las terrazas blancas de Pamukkale y sumérgete en sus famosas aguas termales para una experiencia única y revitalizante.</figcaption>
     </figure>
   </div>
+
 
   <!-- Video inspirador -->
   <div class="video">

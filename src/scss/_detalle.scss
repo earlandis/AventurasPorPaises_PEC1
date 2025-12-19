@@ -1,0 +1,159 @@
+@use "variables" as v;
+@use "sass:color";
+
+/* ===========================
+   Headers de detalle
+=========================== */
+.header-alt-2 { // Japón
+  position: relative;
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url('../imagenes/optimizadas/japón-1200w@2x.jpg') center/cover no-repeat;
+  background-position: bottom;
+  color: v.$bg-light;
+  text-align: center;
+
+  .header-content-det1 {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 6rem 0;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+  }
+}
+
+.header-alt-3 { // Turquía
+  position: relative;
+   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url('../imagenes/optimizadas/turquia-1200w@2x.jpg') center/cover no-repeat;
+  color: v.$bg-light;
+  background-position: bottom;
+  text-align: center;
+  .header-content-det2 {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 6rem 0;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* ===========================
+   Página de detalle
+=========================== */
+.detail-page {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: v.$text;
+  font-family: "Montserrat", sans-serif;
+
+  .text-content {
+    margin-bottom: 3rem;
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+
+    figure {
+      flex: 1 1 calc(33.333% - 1rem);
+      text-align: center;
+    }
+
+    img {
+      height: 250px;
+      object-fit: cover;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+
+    figcaption {
+      margin-top: 0.5rem;
+      font-size: 1rem;
+      color: v.$text;
+    }
+  }
+
+  .video {
+    width: 100%;
+    margin-bottom: 3rem;
+
+    iframe {
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+  }
+}
+
+/* ===========================
+   Media queries detalle
+=========================== */
+@media (max-width: 768px) {
+  .gallery figure {
+    flex: 1 1 100%;
+  }
+
+  .video iframe {
+    height: 250px;
+  }
+  .header-alt-2 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                      url('../imagenes/optimizadas/japón-400w@2x.jpg');
+    padding: 4rem 1rem;
+    background-size: cover;
+  }
+
+  .header-alt-3 {
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                      url('../imagenes/optimizadas/turquia-400w@2x.jpg');
+    padding: 4rem 1rem;    
+    background-size: cover;
+
+  }
+
+  .header-content-det1,
+  .header-content-det2 {
+    padding: 4rem 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+  }
+}

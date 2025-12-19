@@ -1,0 +1,105 @@
+@use "variables" as v;
+@use "sass:color";
+
+/* Header alternativo de enlaces */
+.header-alt-4 {
+  text-align: center;
+   background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url('../imagenes/optimizadas/enlaces-1200w@2x.jpg') center/cover no-repeat;
+  color: v.$bg-light;
+  text-align: center;
+
+  .header-content-link {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 6rem 0;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* Contenido principal de enlaces */
+.links-content {
+  padding: 4rem 2rem;
+  line-height: 1.8;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h2 {
+    color: v.$primary;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+
+    a {
+      color: v.$primary;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: v.$accent;
+      }
+    }
+  }
+
+  ul {
+    margin-top: 1rem;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: v.$accent;
+        font-weight: 600;
+        text-decoration: none;
+        transition: color 0.3s;
+
+        &:hover {
+          color: color.adjust(v.$accent, $lightness: -10%);
+        }
+      }
+    }
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+}
+
+/* Media queries enlaces */
+@media (max-width: 768px) {
+   .header-alt-4 {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../imagenes/optimizadas/enlaces-400w@2x.jpg') center/cover no-repeat;
+    background-position: bottom;
+
+  .header-content-link {
+    padding: 4rem 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+  }}
+
+  .links-content {
+    padding: 2rem 1rem;
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    p, ul li {
+      font-size: 1rem;
+    }
+  }
+}

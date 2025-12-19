@@ -1,0 +1,219 @@
+@use "variables" as v;
+@use "sass:color";
+
+.main-double {
+  display: flex;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  align-items: stretch;
+  flex-wrap: nowrap;
+}
+
+.mapa-categorias {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 2px solid #ddd;
+  padding-right: 2rem;
+
+  .map-container {
+    position: relative;
+    height: 350px; 
+    flex: none;
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              image-set(
+                url('../imagenes/optimizadas/enlaces-800w.jpg') 800w 1x,
+                url('../imagenes/optimizadas/enlaces-800w@2x.jpg') 800w 2x
+              ) center/cover no-repeat;
+    color: v.$bg-light;
+    text-align: center;
+    background-size: contain;
+
+    img {
+      width: 100%;
+      height: 100%; 
+      object-fit: cover; 
+      border-radius: 15px;
+      display: block;
+    }
+
+    .pin {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: v.$accent;
+      border: 0.5px solid v.$bg-light;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      z-index: 10;
+    }
+  }
+}
+
+main h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: v.$primary;
+}
+
+.activities-slider {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+
+  .slider {
+    flex: none;
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+    .cards-container {
+      display: flex;
+      height: 85%;
+      transition: transform 0.3s ease;
+    }
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(30, 136, 229, 0.8);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      font-size: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      z-index: 10;
+      transition: background 0.3s;
+    }
+
+    .prev:hover, .next:hover {
+      background: rgba(30, 136, 229, 1);
+    }
+
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    .card {
+      min-width: 100%;
+      height: 100%;
+      background: v.$bg-light;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      text-align: center;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 0 0;
+      }
+
+      h3 {
+        padding: 0.5rem;
+        background-color: #cbcfce36;
+        border-radius: 0px 0px 15px 15px;
+      }
+    }
+  }
+}
+
+//body.inicio header .hero {
+//  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../imagenes/optimizadas/fondo_prinipal-1200w@2x.jpg') center/cover no-repeat;
+//  background-position: left center;
+//}
+.hero {
+  position: relative;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+
+  .hero-anim, .hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-text {
+    position: relative;
+    z-index: 10; // por encima de la imagen recortada
+    text-align: center;
+    color: v.$accent;
+    padding-top: 225px;
+
+    p { font-size: 1.2rem; margin-bottom: 1.5rem; }
+    .btn { background: #1e88e5; color: #fff; padding: 0.8rem 2rem; border-radius: 25px; }
+  }
+}
+.hero-image text {
+  font-size: 2vw; 
+}
+.hero-frame {
+  position: absolute;
+  inset: 0rem;
+  z-index: 4;
+  pointer-events: none;
+
+  background: 
+    url('../imagenes/optimizadas/fondo_prinipal-1200w@2x.jpg')
+    center / cover no-repeat;
+
+  /* MARCO HUECO */
+  clip-path: polygon((0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 0%, 9.5% 9.5%, 9.5% 93%, 90% 93%, 90% 9.04%, 9.5% 9.5%));
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+
+/* Media queries específicos de inicio */
+@media (max-width: 768px) {
+    .main-double {
+         flex-direction: column;
+    }
+
+    .hero-image text {
+        font-size: 6vw;
+    }
+
+    .mapa-categorias {
+        width: 100%;
+        padding: 0;
+        border-right: none;
+        border-bottom: 2px solid #ddd;
+    }
+        body.inicio header .hero {
+        background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('../imagenes/optimizadas/fondo_prinipal-400w@2x.jpg') center/cover no-repeat;
+        background-position: left center;
+        }
+    .map-container {
+        height: auto;
+    }
+
+    .activities-slider {
+        .slider {
+        .cards-container {
+            gap: 1rem;
+        }
+        .card {
+            min-width: 80%;
+            height: 250px;
+            border-radius: 12px;
+        }
+        }
+    }
+
+    .map-container img {
+        height: auto;
+    }
+}

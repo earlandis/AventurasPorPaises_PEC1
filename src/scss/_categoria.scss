@@ -1,0 +1,132 @@
+@use "variables" as v;
+@use "sass:color";
+
+/* Header alternativo de categoría */
+.header-alt {
+  text-align: center;
+   background: 
+    linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+    url('../imagenes/optimizadas/fondo_categorias-1200w@2x.jpg') center/cover no-repeat;
+  color: v.$bg-light;
+
+  .header-content {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 6rem 0;
+
+    h1 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+  }
+}
+
+/* Lista de categorías */
+.categories-list {
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+/* Cards de categoría */
+.category-card {
+  display: flex;
+  background: v.$bg-light;
+  border-radius: 18px;
+  overflow: visible;
+  width: 95%;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  transition: transform 0.3s;
+  height: 300px;
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+
+  img {
+    width: 40%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 18px 0 0 18px;
+  }
+
+  .info {
+    padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    h3 {
+      color: v.$primary;
+      font-size: 1.9rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn-detail {
+      align-self: flex-end;
+      background: v.$accent;
+      color: v.$bg-light;
+      padding: 0.6rem 1.4rem;
+      border-radius: 25px;
+      font-weight: 600;
+      transition: background 0.3s;
+
+      &:hover {
+        background-color: color.adjust(v.$accent, $lightness: -10%);
+      }
+    }
+  }
+}
+
+/* Media queries categoría */
+@media (max-width: 768px) {
+  .header-alt {
+    background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3))
+                url('../imagenes/optimizadas/fondo_categorias-400w.jpg') center/cover no-repeat;
+
+    .header-content {
+      padding: 4rem 1rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .category-card {
+    flex-direction: column;
+    height: auto;
+
+    img {
+      width: 100%;
+      height: 230px;
+      border-radius: 18px 18px 0 0;
+    }
+
+    .info {
+      .btn-detail {
+        align-self: flex-start;
+      }
+    }
+  }
+}

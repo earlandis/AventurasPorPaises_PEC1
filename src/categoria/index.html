@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GlobalXperience - Países</title>
-  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="../scss/style.scss">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="categoria">
   <header class="header-alt">
     <nav class="navbar">
-      <div class="logo">GlobalXperience</div>
+    <a href="./index.html" class="logo">GlobalXperience</a>
       <ul class="nav-links">
           <li><a href="../index.html">Inicio</a></li>
           <li class="dropdown">
@@ -36,88 +36,198 @@
 
   <main>
     <section class="categories-list">
-      
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/japón.jpg" alt="Montaña">
-        <div class="info">
-          <h3>Japón</h3>
-          <p>Tradición y modernidad se entrelazan en templos, jardines y ciudades futuristas. Una experiencia única en cada rincón.</p>
-          <a href="../det1/index.html" class="btn-detail">Ver detalles</a>
-        </div>
-      </div>
 
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/turquia.jpg" alt="Capadocia">
-        <div class="info">
-          <h3>Turquía</h3>
-          <p>Vuelos en globo sobre paisajes únicos, ciudades subterráneas y formaciones rocosas increíbles. Una experiencia mágica en Turquía.</p>
-          <a href="../det2/index.html" class="btn-detail">Ver detalles</a>
-        </div>
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/japón-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/japón-400w.jpg 400w,
+          ../imagenes/optimizadas/japón-800w.jpg 800w,
+          ../imagenes/optimizadas/japón-1200w.jpg 1200w,
+          ../imagenes/optimizadas/japón-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/japón-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/japón-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Montaña"
+      >
+      <div class="info">
+        <h3>Japón</h3>
+        <p>Tradición y modernidad se entrelazan en templos, jardines y ciudades futuristas. Una experiencia única en cada rincón.</p>
+        <a href="../det1/index.html" class="btn-detail">Ver detalles</a>
       </div>
+    </div>
 
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/francia.jpg" alt="Playas">
-        <div class="info">
-          <h3>Francia</h3>
-          <p>Desde la magia de París hasta los viñedos de Burdeos, vive cultura, gastronomía y paisajes inolvidables.</p>
-          <a href="#" class="btn-detail">Ver detalles</a>
-        </div>
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/turquia-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/turquia-400w.jpg 400w,
+          ../imagenes/optimizadas/turquia-800w.jpg 800w,
+          ../imagenes/optimizadas/turquia-1200w.jpg 1200w,
+          ../imagenes/optimizadas/turquia-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/turquia-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/turquia-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Capadocia"
+      >
+      <div class="info">
+        <h3>Turquía</h3>
+        <p>Vuelos en globo sobre paisajes únicos, ciudades subterráneas y formaciones rocosas increíbles. Una experiencia mágica en Turquía.</p>
+        <a href="../det2/index.html" class="btn-detail">Ver detalles</a>
       </div>
+    </div>
 
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/usa.jpg" alt="Estados Unidos">
-        <div class="info">
-          <h3>Estados Unidos</h3>
-          <p>Ciudades icónicas, parques naturales y aventuras urbanas. Desde Nueva York hasta el Gran Cañón, experiencias únicas en cada rincón.</p>
-          <a href="#" class="btn-detail">Ver detalles</a>
-        </div>
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/francia-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/francia-400w.jpg 400w,
+          ../imagenes/optimizadas/francia-800w.jpg 800w,
+          ../imagenes/optimizadas/francia-1200w.jpg 1200w,
+          ../imagenes/optimizadas/francia-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/francia-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/francia-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Playas"
+      >
+      <div class="info">
+        <h3>Francia</h3>
+        <p>Desde la magia de París hasta los viñedos de Burdeos, vive cultura, gastronomía y paisajes inolvidables.</p>
+        <a href="#" class="btn-detail">Ver detalles</a>
       </div>
+    </div>
 
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/brasil.jpg" alt="Montaña">
-        <div class="info">
-          <h3>Brasil</h3>
-          <p>Playas tropicales, selvas exuberantes y ciudades vibrantes. Aventuras y cultura que despiertan todos tus sentidos.</p>
-          <a href="#" class="btn-detail">Ver detalles</a>
-        </div>
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/usa-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/usa-400w.jpg 400w,
+          ../imagenes/optimizadas/usa-800w.jpg 800w,
+          ../imagenes/optimizadas/usa-1200w.jpg 1200w,
+          ../imagenes/optimizadas/usa-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/usa-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/usa-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Estados Unidos"
+      >
+      <div class="info">
+        <h3>Estados Unidos</h3>
+        <p>Ciudades icónicas, parques naturales y aventuras urbanas. Desde Nueva York hasta el Gran Cañón, experiencias únicas en cada rincón.</p>
+        <a href="#" class="btn-detail">Ver detalles</a>
       </div>
+    </div>
 
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/sudafrica.jpg" alt="Sudáfrica">
-        <div class="info">
-          <h3>Sudáfrica</h3>
-          <p>Safaris, montañas y costas espectaculares. Descubre la fauna salvaje y la cultura diversa de un continente lleno de aventuras.</p>
-          <a href="#" class="btn-detail">Ver detalles</a>
-        </div>
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/brasil-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/brasil-400w.jpg 400w,
+          ../imagenes/optimizadas/brasil-800w.jpg 800w,
+          ../imagenes/optimizadas/brasil-1200w.jpg 1200w,
+          ../imagenes/optimizadas/brasil-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/brasil-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/brasil-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Montaña"
+      >
+      <div class="info">
+        <h3>Brasil</h3>
+        <p>Playas tropicales, selvas exuberantes y ciudades vibrantes. Aventuras y cultura que despiertan todos tus sentidos.</p>
+        <a href="#" class="btn-detail">Ver detalles</a>
       </div>
+    </div>
 
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/australia.jpg" alt="Montaña">
-        <div class="info">
-          <h3>Australia</h3>
-          <p>Playas, desiertos y naturaleza salvaje. Aventuras al aire libre y encuentros con fauna única te esperan.</p>
-          <a href="#" class="btn-detail">Ver detalles</a>
-        </div>
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/sudafrica-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/sudafrica-400w.jpg 400w,
+          ../imagenes/optimizadas/sudafrica-800w.jpg 800w,
+          ../imagenes/optimizadas/sudafrica-1200w.jpg 1200w,
+          ../imagenes/optimizadas/sudafrica-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/sudafrica-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/sudafrica-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Sudáfrica"
+      >
+      <div class="info">
+        <h3>Sudáfrica</h3>
+        <p>Safaris, montañas y costas espectaculares. Descubre la fauna salvaje y la cultura diversa de un continente lleno de aventuras.</p>
+        <a href="#" class="btn-detail">Ver detalles</a>
       </div>
+    </div>
 
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/egipto.jpg" alt="Egipto">
-        <div class="info">
-          <h3>Egipto</h3>
-          <p>Piramides, desiertos y el majestuoso Nilo. Historia y aventuras milenarias que te transportan a otra época.</p>
-          <a href="#" class="btn-detail">Ver detalles</a>
-        </div>
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/australia-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/australia-400w.jpg 400w,
+          ../imagenes/optimizadas/australia-800w.jpg 800w,
+          ../imagenes/optimizadas/australia-1200w.jpg 1200w,
+          ../imagenes/optimizadas/australia-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/australia-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/australia-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Montaña"
+      >
+      <div class="info">
+        <h3>Australia</h3>
+        <p>Playas, desiertos y naturaleza salvaje. Aventuras al aire libre y encuentros con fauna única te esperan.</p>
+        <a href="#" class="btn-detail">Ver detalles</a>
       </div>
+    </div>
 
-      <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <img src="../imagenes/newZeland.jpg" alt="Nueva Zelanda">
-        <div class="info">
-          <h3>Nueva Zelanda</h3>
-          <p>Montañas, fiordos y aventuras extremas. Naturaleza pura que despierta tu espíritu explorador.</p>
-          <a href="#" class="btn-detail">Ver detalles</a>
-        </div>
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/egipto-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/egipto-400w.jpg 400w,
+          ../imagenes/optimizadas/egipto-800w.jpg 800w,
+          ../imagenes/optimizadas/egipto-1200w.jpg 1200w,
+          ../imagenes/optimizadas/egipto-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/egipto-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/egipto-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Egipto"
+      >
+      <div class="info">
+        <h3>Egipto</h3>
+        <p>Piramides, desiertos y el majestuoso Nilo. Historia y aventuras milenarias que te transportan a otra época.</p>
+        <a href="#" class="btn-detail">Ver detalles</a>
       </div>
-    </section>
+    </div>
+
+    <div class="category-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+      <img 
+        src="../imagenes/optimizadas/newZeland-800w.jpg"
+        srcset="
+          ../imagenes/optimizadas/newZeland-400w.jpg 400w,
+          ../imagenes/optimizadas/newZeland-800w.jpg 800w,
+          ../imagenes/optimizadas/newZeland-1200w.jpg 1200w,
+          ../imagenes/optimizadas/newZeland-400w@2x.jpg 400w 2x,
+          ../imagenes/optimizadas/newZeland-800w@2x.jpg 800w 2x,
+          ../imagenes/optimizadas/newZeland-1200w@2x.jpg 1200w 2x
+        "
+        sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        alt="Nueva Zelanda"
+      >
+      <div class="info">
+        <h3>Nueva Zelanda</h3>
+        <p>Montañas, fiordos y aventuras extremas. Naturaleza pura que despierta tu espíritu explorador.</p>
+        <a href="#" class="btn-detail">Ver detalles</a>
+      </div>
+    </div>
+
+  </section>
+
   </main>
 
   <footer>
